@@ -1,73 +1,82 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace CollectionList
 {
     class Inventory<T> : IEnumerable<T>
     {
-        T[] items = new T[10];
-        int count = 0;
+        public T[] Items = new T[10];
+        public int Count = 0;
 
         public void AddJersey(T item)
         {
-            if (count == (items.Length / 2))
+            if (Count == (Items.Length / 2))
             {
-                T[] newArray = new T[items.Length * 2];
+                T[] newArray = new T[Items.Length * 2];
 
-                for (int i = 0; i < items.Length; i++)
+                for (int i = 0; i < Items.Length; i++)
                 {
-                    newArray[i] = items[i];
+                    newArray[i] = Items[i];
                 }
 
-                items = newArray;
-
+                Items = newArray;
             }
-            items[count] = item;
-
-
-            count++;
+            Items[Count] = item;
+            Count++;
         }
 
         public void RemoveJersey(T item)
         {
-            int j = 0;
-            T[] newArray = new T[items.Length / 2];
-            for (int i = 0; i < items.Length; i++)
+            T[] newArray = new T[Items.Length];
+            if (Count - 1 == Items.Length / 2)
             {
-                if (!item.Equals(items[j]))
+                newArray = new T[Items.Length / 2];
+            }
+
+            int j = 0;
+            int tempCount = Count;
+            for (int i = 0; i < tempCount; i++)
+            {
+                if (j > tempCount) break;
+                if (!item.Equals(Items[j]))
                 {
-                    if (j > count) return;
-                    newArray[i] = items[j];
+                    newArray[i] = Items[j];
                     j++;
                 }
                 else
                 {
+                    Count--;
+                    i--;
                     j++;
                 }
             }
+            Items = newArray;
+        }
 
-            public IEnumerator<T> GetEnumerator()
+        public int AtIndexOf(T item)
+        {
+            for (int i = 0; i < Count; i++)
             {
-                for (int i = 0; i < count; i++)
+                if (Items[i].Equals(item))
                 {
-                    yield return items[i];
+                    return i;
                 }
             }
+            return -1;
+        }
 
-            IEnumerator IEnumerable.GetEnumerator()
-                {
-                return GetEnumerator();
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                yield return Items[i];
             }
         }
 
-        internal object Remove(int input)
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
-        }
-
-        internal void Add(object p)
-        {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
     }
 }
