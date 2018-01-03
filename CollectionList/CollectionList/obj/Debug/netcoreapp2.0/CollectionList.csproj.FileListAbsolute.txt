@@ -1,0 +1,8 @@
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\bin\Debug\netcoreapp2.0\CollectionList.deps.json
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\bin\Debug\netcoreapp2.0\CollectionList.runtimeconfig.json
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\bin\Debug\netcoreapp2.0\CollectionList.runtimeconfig.dev.json
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\bin\Debug\netcoreapp2.0\CollectionList.dll
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\obj\Debug\netcoreapp2.0\CollectionList.csprojResolveAssemblyReference.cache
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\obj\Debug\netcoreapp2.0\CollectionList.csproj.CoreCompileInputs.cache
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\obj\Debug\netcoreapp2.0\CollectionList.AssemblyInfoInputs.cache
+C:\Users\nyque\source\repos\Lab07-CustomCollection\CollectionList\CollectionList\obj\Debug\netcoreapp2.0\CollectionList.AssemblyInfo.cs
