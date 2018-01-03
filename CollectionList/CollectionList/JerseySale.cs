@@ -54,7 +54,7 @@ namespace CollectionList
             }
             catch (Exception)
             {
-                Console.WriteLine("Something went wrong; please press enter to retry.");
+                Console.WriteLine("");
                 StoreLoop(saveShop, saveCart);
             }
         }
